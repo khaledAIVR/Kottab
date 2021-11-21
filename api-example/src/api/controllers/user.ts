@@ -1,7 +1,8 @@
-import e, * as express from "express";
+import * as express from "express";
 import UserService from "../services/user";
 import { writeJsonResponse } from "../../utils/express";
 
+//Auth middleware
 export function auth(
   req: express.Request,
   res: express.Response,

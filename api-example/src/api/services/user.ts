@@ -1,6 +1,7 @@
 export type ErrorResponse = { error: { type: string; message: string } };
 export type AuthResponse = ErrorResponse | { userId: string };
 
+//Auth service:
 function auth(bearerToken: string): Promise<AuthResponse> {
   return new Promise(function (resolve, _) {
     const token = bearerToken.replace("Bearer ", "");
