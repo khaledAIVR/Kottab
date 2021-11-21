@@ -1,1 +1,1 @@
-declare module "swagger-routes-express";
+declare module 'swagger-routes-express'

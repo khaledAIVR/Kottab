@@ -1,19 +1,16 @@
-export type ErrorResponse = { error: { type: string; message: string } };
-export type AuthResponse = ErrorResponse | { userId: string };
+export type ErrorResponse = {error: {type: string, message: string}}
+export type AuthResponse = ErrorResponse | {userId: string}
 
-//Auth service:
 function auth(bearerToken: string): Promise<AuthResponse> {
-  return new Promise(function (resolve, _) {
-    const token = bearerToken.replace("Bearer ", "");
-    if (token === "fakeToken") {
-      resolve({ userId: "fakeUserId" });
-      return;
+  return new Promise(function(resolve, reject) {
+    const token = bearerToken.replace('Bearer ', '')
+    if (token === 'fakeToken') {
+      resolve({userId: 'fakeUserId'})
+      return
     }
 
-    resolve({
-      error: { type: "unauthorized", message: "Authentication Failed" },
-    });
-  });
+    resolve({error: {type: 'unauthorized', message: 'Authentication Failed'}})
+  })
 }
 
-export default { auth: auth };
+export default {auth: auth}
