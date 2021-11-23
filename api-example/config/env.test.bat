@@ -1,0 +1,2 @@
+SET MONGO_URL=inmemory
+SET MONGO_AUTO_INDEX=true

@@ -1,2 +1,5 @@
 SET EXMPL_DEV_LOGGER=true
 SET LOGGER_LEVEL=debug
+
+SET MONGO_URL=mongodb://localhost/exmpl
+SET MONGO_AUTO_INDEX=true
