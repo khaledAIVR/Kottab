@@ -2,7 +2,7 @@ import dotenvExtended from "dotenv-extended";
 import dotenvParseVariables from "dotenv-parse-variables";
 
 const env = dotenvExtended.load({
-  path: process.env.ENV_FILE,
+  path: "./config/env.defaults.bat",
   defaults: "./config/env.defaults.bat",
   schema: "./config/env.schema.bat",
   includeProcessEnv: true,
@@ -10,7 +10,6 @@ const env = dotenvExtended.load({
   errorOnMissing: true,
   errorOnExtra: true,
 });
-
 const parsedEnv = dotenvParseVariables(env);
 
 // Define log levels type (silent + Winston default npm)
