@@ -1,2 +1,5 @@
 SET MORGAN_LOGGER=true
 SET LOGGER_LEVEL=http
+
+SET MONGO_URL=mongodb://localhost/exmpl
+SET MONGO_AUTO_INDEX=false
